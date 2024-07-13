@@ -1,0 +1,151 @@
+/* Main container styling */
+.edit-main-container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.edit-heading h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Item list styling */
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Optional: add some space between items */
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(23.133% - 10px); /* Each item takes up one-third of the row */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.edit-sub-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.edit-sub-container h3,
+.edit-sub-container p {
+    margin: 5px 0;
+}
+
+/* Category styling */
+.item-category {
+    font-weight: bold;
+    color: #007bff;
+
+}
+
+/* Edit form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+}
+
+ .formedit label{
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+.formedit input {
+    outline: none;
+}
+
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+form button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Buttons for edit and delete actions */
+.edit-sub-container button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-sub-container button:nth-child(1) {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.edit-sub-container button:nth-child(2) {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.edit-sub-container button:nth-child(1):hover {
+    background-color: #e0a800;
+}
+
+.edit-sub-container button:nth-child(2):hover {
+    background-color: #c82333;
+}
+
+/* Image styling */
+.edit-image img {
+ width: 100%;
+ height: 100%;
+}
+.edit-image{
+    height: 40vh;
+}
