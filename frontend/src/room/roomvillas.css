@@ -1,0 +1,190 @@
+.villas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Ensure no wrapping */
+  gap: 20px;
+}
+
+.price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 10;
+  font-family: sans-serif;
+  font-weight: 600;
+  background-color: #009532;
+}
+
+.villas-image {
+  position: relative;
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  flex: 1;
+}
+
+.villas-image img {
+  height: 75vh;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 4px;
+}
+
+.villas-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(70%);
+}
+
+.villas-main {
+  background: #E9F4F8;
+  margin-top: 20px;
+}
+
+.villas-text span {
+  font-family: 'outfit';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36.08px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.villas-icon {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.villas-bed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.villas-bed span {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32.07px;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.villas-main h1 {
+  font-size: 25px;
+  font-family: 'playfair display';
+  color: black;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .villas {
+      gap: 10px;
+  }
+
+  .villas-image {
+      width: 33.33%; /* 3 columns */
+  }
+
+  .villas-image img {
+      height: 34vh;
+  }
+
+  .villas-text span {
+      font-size: 14px;
+  }
+
+  .villas-bed span {
+      font-size: 14px;
+  }
+
+  .price {
+      font-size: 14px;
+  }
+
+  .villas-main h1 {
+      font-size: 20px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .villas {
+      gap: 1px;
+     
+  }
+
+  .villas-image {
+      width: 33.33%; /* 3 columns */
+     
+      margin: 2px;
+  }
+
+  .villas-image img {
+      height: 15vh;
+  }
+
+  .villas-text span {
+      font-size: 8px;
+      line-height: 0;
+    
+  }
+
+  .villas-bed span {
+      font-size: 8px;
+  }
+
+  .price {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: 600;
+      background-color: #009532;
+
+  }
+
+  .villas-main h1 {
+      font-size: 16px;
+     
+  }
+  .villas-icon {
+    margin: 8px;
+  }
+}
+
+/* iPad Mini */
+@media (min-width: 768px) and (max-width: 834px) and (orientation: portrait),
+     (min-width: 1024px) and (max-width: 1112px) and (orientation: landscape) {
+  .villas {
+      gap: 10px;
+  }
+
+  .villas-image {
+      width: 33.33%; /* 3 columns */
+  }
+
+  .villas-image img {
+      height: 50vh;
+  }
+
+  .villas-text span {
+      font-size: 14px;
+  }
+
+  .villas-bed span {
+      font-size: 14px;
+  }
+
+  .price {
+      font-size: 14px;
+  }
+
+  .villas-main h1 {
+      font-size: 20px;
+  }
+}

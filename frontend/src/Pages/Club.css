@@ -1,0 +1,148 @@
+.club{
+    background-color: rgb(231, 255, 255);
+}
+.club-bg-img{
+    position: relative;
+    border: none;
+    padding: 0;
+}
+
+.club-bg-img img {
+    width: 100%;
+}
+
+.club-bg-img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Ensure the text is visible on the image */
+}
+
+.club-bg-img-text h2 {
+    font-size: 3em; /* Adjust as needed */
+    margin: 0;
+    font-family: 'aclonica';
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.club-bg-img p {
+    font-size: 1.6em; /* Adjust as needed */
+    margin: 10px 0;
+    font-family: 'playfair dispaly',sans-serif;
+    animation: fadeInUp 1.5s ease-in-out ;
+}
+.soundproof {
+    padding: 20px;
+  }
+  .soundproof-intro{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .soundproof-intro h3 {
+    font-family: 'outfit';
+    font-size: 1.6em;
+    color: #333;
+  }
+  
+  .soundproof-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.soundproof-img img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soundproof-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .soundproof-img {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .soundproof-img img {
+        width: 100%;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+}
+
+@media (max-width: 480px) {
+    .soundproof-img {
+        padding: 10px;
+    }
+
+    .soundproof-img img {
+        margin-bottom: 10px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+@media (max-width: 768px) {
+
+    .club-bg-img-text h2 {
+        font-size: 1.5em; /* Adjust as needed */
+    }
+    
+    .club-bg-img p {
+        font-size: 1em; /* Adjust as needed */
+    }
+    
+}
+@media(max-width: 428px) {
+    .club-bg-img-text h2 {
+        font-size: 1em; /* Adjust as needed for smaller screens */
+    }
+
+    .club-bg-img p{
+        font-size: 0.5em; /* Adjust as needed for smaller screens */
+        
+    }
+
+
+ }

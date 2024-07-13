@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: rgb(138, 178, 148);
+  }
+  
+  .about-details {
+    
+    margin: 20px 0;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-family: 'outfit';
+  }
+  
+  .about-details:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-details h1,
+  .about-details h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .about-details h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .about-details h2 {
+    font-size: 2em;
+  }
+  
+  .about-details p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+  }
+  .about-details span{
+    display: flex;
+    padding: 30px 0px;
+    justify-content: center;
+    text-align: justify;
+    line-height: 25px;
+    color: black;
+  }
+  
+  .about-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .about-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+  }

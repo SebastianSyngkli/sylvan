@@ -1,0 +1,217 @@
+.con-ess {
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding: 60px 0;
+  background: #f7f7f7;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.essentials {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 60px;
+}
+
+.ess-text {
+  font-family: 'outfit';
+  justify-items: start;
+  list-style: none;
+}
+
+.ess-text span {
+  font-size: 18px;
+  color: #6b6b6b;
+  margin: 18px 0;
+}
+
+.ess-icon ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 30px 30px;
+}
+
+.ess-icon ul li span {
+  padding-left: 8px;
+  font-family: "outfit";
+  color: #6b6b6b;
+}
+
+.ess-icon ul li {
+  flex: 1 0 30%; /* Flex items take up 30% of the row */
+  display: flex;
+  align-items: center;
+  margin: 40px 0px; /* Optional: Add margin to separate icons */
+}
+
+.ess-icon ul li img {
+  max-width: 100px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 60px;
+}
+
+.menu-img {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-items: center;
+  align-items: center;
+}
+
+.menu-img img {
+  height: 200px;
+  width: auto;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 100%; /* Add this to make images scale down */
+  object-fit: cover; /* Add this to make images scale down */
+}
+
+.menu-img img:nth-child(1) {
+  grid-column: span 2; /* Span across both columns */
+  justify-self: center; /* Center the first image */
+  margin: 4px 0;
+}
+@media(max-width: 768px){
+  .con-ess {
+    flex-direction: column; /* Stack essentials and menu vertically */
+    padding: 20px 0;
+  }
+
+  .essentials {
+    margin: 10px 20px;
+   
+  }
+
+  .ess-text {
+    font-size: 14px;
+  }
+
+  .ess-icon ul li span {
+    font-size: 12px;
+  }
+  
+  .ess-icon ul li {
+    flex: 1 0 50%; /* Flex items take up 50% of the row */
+    margin: 20px 0px;
+   
+  }
+
+  .ess-icon ul li img {
+    width: 20px; /* Adjust the size as needed */
+    height: auto;
+  }
+
+  .menu {
+    margin: 10px 20px;
+  }
+
+  .menu-img {
+    grid-template-columns: repeat(1, auto);
+    padding: 10px 20px;
+  }
+
+  .menu-img img {
+    width: 80%;
+    object-fit: contain;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 5px;
+
+  }
+
+  .menu-img .menu-item {
+    height: auto;
+  } 
+}
+
+/* Media query for max-width 412px */
+@media(max-width: 412px) {
+  .con-ess {
+    flex-direction: column; /* Stack essentials and menu vertically */
+    padding: 20px 0;
+  }
+
+  .essentials {
+    margin: 10px 20px;
+  }
+
+  .ess-text {
+    font-size: 12px;
+  }
+
+  .ess-icon ul li span {
+    font-size: 10px;
+  }
+
+  .ess-icon ul li {
+    flex: 1 0 50%; /* Flex items take up 50% of the row */
+    margin: 20px 0px;
+  }
+
+  .ess-icon ul li img {
+    width: 20px; /* Adjust the size as needed */
+    height: auto;
+  }
+
+  .menu {
+    margin: 10px 20px;
+  }
+
+  .menu-img {
+    grid-template-columns: repeat(1, auto);
+    padding: 10px 20px;
+  }
+
+  .menu-img img {
+    width: 80%;
+    object-fit: contain;
+    max-width: 100%;
+    border: none;
+   
+  }
+
+  .menu-img .menu-item {
+    height: auto;
+  }
+}
+
+/* Media query for max-width 375px */
+@media(max-width: 375px) {
+  .con-ess {
+    flex-direction: column; /* Stack essentials and menu vertically */
+    padding: 20px 0;
+  }
+  .essentials {
+    margin: 10px 15px;
+  }
+
+  .ess-icon ul li {
+    flex: 1 0 100%; /* Flex items take up 100% of the row */
+    margin: 15px 0px;
+  }
+
+  .menu {
+    margin-right: 15px;
+  }
+
+  .menu-img {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .menu-img img {
+    height: auto; /* Adjust height to auto */
+    width: 100%; /* Set width to 100% */
+    min-height: 150px; /* Increased minimum height */
+    max-height: 200px; /* Increased maximum height */
+    object-fit: contain; /* Contain the image within the specified dimensions */
+  }
+}

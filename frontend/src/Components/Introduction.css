@@ -1,0 +1,51 @@
+.introduction {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 50px;
+    justify-content: center;
+    margin: 40px 4em;
+    background-color: #f7f7f7;
+    font-size: 1.4em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.introduction p{
+    font-family: 'outfit';
+    color: #6b6b6b;
+    margin: 20px 10px;
+}
+@media(max-width: 768px){
+    .introduction {
+        margin: 6px 2.4em; /* Reduce margin */
+        font-size: 0.8em; /* Reduce font size */
+        line-height: 22px;
+    }
+    .introduction p {
+        margin: 7px 7px; /* Reduce margin */
+    }
+}
+
+/* Media query for max-width 412px */
+@media only screen and (max-width: 412px) {
+    .introduction {
+        margin: 5px 2em; /* Reduce margin */
+        font-size: 0.6em; /* Reduce font size */
+        line-height: 22px;
+    }
+    .introduction p {
+        margin: 5px 5px; /* Reduce margin */
+    }
+}
+
+/* Media query for max-width 375px */
+@media only screen and (max-width: 375px) {
+    .introduction {
+        margin: 4px 1.5em; /* Reduce margin further */
+        font-size: 0.5em; /* Reduce font size further */
+        line-height: 21px;
+    }
+    .introduction p {
+        margin: 0px 3px; /* Reduce margin further */
+    }
+}

@@ -1,0 +1,79 @@
+.hero {
+    position: relative;
+   
+    border: none;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Ensure the text is visible on the image */
+}
+
+.hero-text h2 {
+    font-size: 3em; /* Adjust as needed */
+    margin: 0;
+    font-family: 'aclonica';
+    font-weight: 300;
+    color: #BAFFF7;
+}
+
+.hero-text p {
+    font-size: 1.6em; /* Adjust as needed */
+    margin: 8px 0;
+    font-family: 'playfair dispaly', sans-serif;
+    animation: fadeInUp 1.5s ease-in-out ;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 1.5em; /* Adjust as needed for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1em; /* Adjust as needed for smaller screens */
+    }
+}
+   @media (max-width: 412px) {
+    .hero-text h2 {
+        font-size: 1em; /* Adjust as needed for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 0.5em; /* Adjust as needed for smaller screens */
+    }
+   
+ }
+ @media(max-width: 428px) {
+    .hero-text h2 {
+        font-size: 1em; /* Adjust as needed for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 0.5em; /* Adjust as needed for smaller screens */
+    }
+    
+ }

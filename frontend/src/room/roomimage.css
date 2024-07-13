@@ -1,0 +1,82 @@
+/* roomimage.css */
+.roomimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #E9F4F8, #ffffff); /* Gradient background */
+    padding: 50px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .roomimage h1 {
+    font-size: 3em;
+    font-family: 'outfit';
+    font-weight: bold;
+    color: #333; /* Dark grey color */
+    margin: 20px 0 10px 0;
+    animation: fadeInDown 1s ease-in-out; /* Animation effect */
+  }
+  
+  .roomimage h2 {
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: #555; /* Lighter grey color */
+    margin: 10px 0;
+    animation: fadeInUp 1s ease-in-out; /* Animation effect */
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .roomimage {
+      padding: 30px 10px;
+    }
+  
+    .roomimage h1 {
+      font-size: 2em;
+    }
+  
+    .roomimage h2 {
+      font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .roomimage {
+      padding: 20px 5px;
+    }
+  
+    .roomimage h1 {
+      font-size: 1.5em;
+    }
+  
+    .roomimage h2 {
+      font-size: 1em;
+    }
+  }
+  

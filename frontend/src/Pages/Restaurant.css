@@ -1,0 +1,204 @@
+/* General Styles */
+.restaurant {
+    width: 100%;
+}
+
+/* Restaurant Background Image Section */
+.restaurant-bg-img {
+    position: relative;
+    border: none;
+    padding: 0;
+}
+
+.restaurant-bg-img img {
+    width: 100%;
+}
+
+.restaurant-bg-img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Ensure the text is visible on the image */
+}
+
+.restaurant-bg-img-text h2 {
+    font-size: 3em; /* Adjust as needed */
+    margin: 0;
+    font-family: 'Aclonica';
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.restaurant-bg-img p {
+    font-size: 1.6em; /* Adjust as needed */
+    margin: 10px 0;
+    font-family: 'Playfair Display', sans-serif;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Restaurant Intro Section */
+.res-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light grey background */
+    font-family: 'Playfair Display', serif; /* Match the font with the text */
+    color: #333; /* Dark grey text */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.res-intro h3 {
+    margin: 0 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.res-intro span {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Menu Section */
+.menu-res {
+    text-align: center;
+    padding: 30px;
+    color: #444;
+    font-family: 'Aclonica', sans-serif;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.menu-res h2 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 300;
+    color: #000000;
+}
+
+/* Menu Food Items Section */
+.menu-food-items {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    background-color: #f7f7f7; /* Light grey background */
+
+
+}
+
+.menu-food-img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.menu-food-img img {
+    height: 200px;
+    width: 260px;
+    object-fit: cover; /* Ensures the images cover the given dimensions */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+    margin: 5px 5px;
+}
+
+.menu-food-img img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .restaurant-bg-img-text h2 {
+        font-size: 1.5em; /* Adjust as needed */
+    }
+    
+    .restaurant-bg-img p {
+        font-size: 1em; /* Adjust as needed */
+    }
+
+    .res-intro {
+        padding: 15px;
+    }
+
+    .res-intro h3 {
+        font-size: 1.5em;
+    }
+
+    .res-intro span {
+        font-size: 1em;
+    }
+
+    .menu-res h2 {
+        font-size: 2em;
+    }
+
+    .menu-food-items {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .menu-food-img img {
+        height: 150px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 428px) {
+    .restaurant-bg-img-text h2 {
+        font-size: 1em; /* Adjust as needed for smaller screens */
+    }
+
+    .restaurant-bg-img p {
+        font-size: 0.5em; /* Adjust as needed for smaller screens */
+    }
+
+    .res-intro {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .res-intro h3 {
+        font-size: 1.2em;
+    }
+
+    .res-intro span {
+        font-size: 0.9em;
+    }
+
+    .menu-res h2 {
+        font-size: 1.5em;
+    }
+
+    .menu-food-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-food-img img {
+        height: 120px;
+        width: 160px;
+    }
+}
