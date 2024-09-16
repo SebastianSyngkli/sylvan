@@ -29,12 +29,11 @@
 .villas-image img {
   height: 75vh;
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   border-radius: 4px;
 }
 
 .villas-image img:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   filter: brightness(70%);
 }
@@ -80,6 +79,20 @@
   color: black;
 }
 
+.btn-vi {
+  position: absolute;
+  left: 10%; /* Adjusts horizontal position */
+  color: white;
+  z-index: 1; 
+  top: 70%; /* Adjust the vertical position as needed */
+  background-color: black;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* Media Queries */
 
 /* Tablets */
@@ -87,7 +100,9 @@
   .villas {
       gap: 10px;
   }
-
+  .btn-vi{
+    top: 50%;
+  }
   .villas-image {
       width: 33.33%; /* 3 columns */
   }
@@ -111,23 +126,35 @@
   .villas-main h1 {
       font-size: 20px;
   }
+  .cabin-con {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Mobile Devices */
 @media (max-width: 480px) {
   .villas {
       gap: 1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
      
+  }
+  .cabin-con {
+    display: flex;
+    flex-direction: column;
   }
 
   .villas-image {
-      width: 33.33%; /* 3 columns */
-     
-      margin: 2px;
+    width: 90%;
+    height: 30vh;
+
   }
 
   .villas-image img {
-      height: 15vh;
+      height: auto;
+      width: 100%;
   }
 
   .villas-text span {

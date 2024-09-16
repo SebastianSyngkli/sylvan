@@ -1,1 +1,1 @@
-export const url = 'http://194.238.23.2/api'
+export const url = 'https://backend.sylvanhorizonresort.in'

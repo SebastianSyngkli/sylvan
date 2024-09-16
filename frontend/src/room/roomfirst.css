@@ -33,7 +33,7 @@
 
 
 .roomfirst-1 img:hover {
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.0); /* Slight zoom effect */
   filter: brightness(70%);
 }
 
@@ -53,6 +53,22 @@
   justify-content: space-around;
  
 }
+
+.view-button {
+  position: absolute;
+  top: 60%; /* Adjust this value to position the button vertically */
+  left: 90%;
+  transform: translateX(-50%); /* Center the button horizontally */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1; /* Ensure the button appears on top of the image */
+  font-size: 16px;
+}
+
 
 .roomicon-1 {
   display: flex;
@@ -90,11 +106,12 @@
 }
 
 .price-tag {
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 340px; /* Adjust as needed */
   left: 40px; /* Adjust as needed */
   color: white;
-  padding: 0px;
+  padding: 5px;
   border-radius: 3px;
   font-size: 32px;
   font-weight: 600;
@@ -143,6 +160,13 @@
       line-height: 2px;
       
   }
+
+  .view-button {
+    top: 50%; /* Adjust the button position for smaller screens */
+    left: 80%; /* Slightly move the button closer to the center */
+    font-size: 14px; /* Decrease font size */
+    padding: 10px 20px; /* Adjust padding */
+  }
   
 }
 
@@ -167,7 +191,7 @@
 
   .price-tag {
       font-size: 12px;
-      top: 140px;
+      top: 120px;
       left: 2px;
      padding: 3px;
 
@@ -177,6 +201,12 @@
     font-size: 8px;
     line-height: 10px;
    
+  }
+  .view-button {
+    top: 30%; /* Adjust the button position for smaller screens */
+    left: 80%; /* Slightly move the button closer to the center */
+    font-size: 14px; /* Decrease font size */
+    padding: 10px 20px; /* Adjust padding */
   }
   .roomicon-1-text{
     margin: 4px;
@@ -192,7 +222,5 @@
       font-size: 8px;
       line-height: 0;
       letter-spacing: 0;
-      
-     
   }
 }
