@@ -64,6 +64,48 @@
     line-height: 1.5;
 }
 
+.image-con{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .image-con img {
+    width: 700px;
+    height: auto;
+  }
+   
+
+@media (max-width: 1366px) {
+  .image-con {
+    flex-direction: row;  /* Change to column layout for iPad Pro and smaller */
+    align-items: center;     /* Center images vertically */
+  }
+
+  .image-con img {
+    width: 100%;            /* Make images responsive */
+    max-width: 500px;        /* Adjust max width for iPad Pro */
+    margin-bottom: 20px;     /* Add spacing between stacked images */
+  }
+}
+  
+  /* Media query for small screens */
+  @media (max-width: 768px) {
+    .image-con{
+      flex-direction: column;
+      align-items: center; /* Center images in column layout */
+      gap: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  
+    .image-con img {
+      width: 100%; /* Make images responsive to fit smaller screens */
+      max-width: 400px; /* Limit max size */
+    }
+  }
+  
+
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
     .text {
@@ -129,7 +171,7 @@
 }
 
 /* Animation Keyframes */
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translate3d(0, 100%, 0);
@@ -138,4 +180,4 @@
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
-}
+} */

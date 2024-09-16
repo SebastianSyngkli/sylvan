@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
+import sylvian1 from '../assets/sylvian1.png'
+import sylvian2 from '../assets/sylvian2.png'
 import './brocure.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { itemFetch } from '../features/itemSlice';
+
 
 const Brocure = () => {
   const dispatch = useDispatch();
@@ -30,6 +33,13 @@ const Brocure = () => {
         </div>
       </div>
 
+      <div className="image-con">
+        <img src={sylvian1} alt="Image 1" />
+        <img src={sylvian2} alt="Image 2" />
+      </div>
+
+
+
       <div className="text">
         <h3>A. Infinity Swimming Pool</h3>
       </div>
@@ -43,7 +53,7 @@ const Brocure = () => {
           {filteritemsa.map((item) => (
             <div key={item.id}>
               <h2>Pricing: <br /> 1. For Party-Rs {item.party}/- <br />2. For Wedding-Rs {item.wedding}/-</h2>
-             {/*<h3>Description</h3>
+              {/*<h3>Description</h3>
               <p>1. No smoking inside the pool.</p>
               <p>2. Drinking of alcohol in the pool is not allowed</p>*/}
             </div>
@@ -106,7 +116,7 @@ const Brocure = () => {
           {filteritemsd.map((item) => (
             <div key={item.id}>
               <h2>Pricing: <br /> Rs {item.costs}/-</h2>
-             {/* <h3>Description</h3>
+              {/* <h3>Description</h3>
               <p>1. No smoking inside the pool.</p>
               <p>2. Drinking of alcohol in the pool is not allowed</p>*/}
             </div>
@@ -127,7 +137,7 @@ const Brocure = () => {
           {filteritemse.map((item) => (
             <div key={item.id}>
               <h2>Pricing: <br /> a. Children-Rs {item.child} per head/hr. <br />b. Adult-Rs {item.adult} per head/hr</h2>
-             {/*<h3>Description</h3>
+              {/*<h3>Description</h3>
               <p>1. No smoking inside the pool.</p>
               <p>2. Drinking of alcohol in the pool is not allowed</p>*/}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import Sylvan_logo from '../assets/logo/sylvan_logo.png';
+import Sylvan_logo from '../assets/logo/logo.png';
 
 import { FaBars } from "react-icons/fa6";
 
