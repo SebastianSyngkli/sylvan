@@ -7,12 +7,13 @@
 .gallery-bg-img {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100vh;
 }
 
 .gallery-bg-img img {
   width: 100%;
   height: 100vh;
+  object-fit: cover; /* Ensures image covers the background properly */
 }
 
 .gallery-bg-img-text {
@@ -24,18 +25,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white; /* Ensure the text is visible on the image */
+  color: white;
 }
 
 .gallery-bg-img-text h2 {
-  font-size: 3em; /* Adjust as needed */
+  font-size: 3em;
   margin: 0;
   font-family: 'Aclonica', sans-serif;
   font-weight: 300;
 }
 
 .gallery-bg-img-text p {
-  font-size: 1.6em; /* Adjust as needed */
+  font-size: 1.6em;
   margin: 10px 0;
   font-family: 'Playfair Display', sans-serif;
   animation: fadeInUp 1.5s ease-in-out;
@@ -44,9 +45,9 @@
 .images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px; /* Adjust gap between images */
+  gap: 10px; /* Gap between images */
   margin-top: 20px;
-  width: 90%; /* Adjust the width as needed */
+  width: 90%;
 }
 
 .image-item {
@@ -61,8 +62,10 @@
   display: block;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* Ensure images maintain aspect ratio and fit their container */
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 1200px) {
   .images {
     grid-template-columns: repeat(3, 1fr);
@@ -71,11 +74,11 @@
 
 @media (max-width: 768px) {
   .gallery-bg-img-text h2 {
-    font-size: 1.6em; /* Adjust as needed for smaller screens */
+    font-size: 1.6em;
   }
 
   .gallery-bg-img-text p {
-    font-size: 1em; /* Adjust as needed for smaller screens */
+    font-size: 1em;
   }
 
   .images {
@@ -84,8 +87,15 @@
   }
 
   .image-item img {
-    width: 100%;
-    height: 21vh;
+    height: auto;
+  }
+
+  .gallery-bg-img {
+    height: 50vh;
+  }
+
+  .gallery-bg-img img {
+    height: auto;
   }
 }
 
@@ -94,73 +104,85 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .image-item {
-    height: auto;
+  .image-item img {
+    height: 20vh;
   }
 
-  .image-item img {
-    width: 100%;
-    height: 20vh;
+  .gallery-bg-img {
+    height: 50vh;
+  }
+
+  .gallery-bg-img img {
+    height: auto;
   }
 }
 
 @media (max-width: 428px) {
   .gallery-bg-img-text h2 {
-    font-size: 1.3em; /* Adjust as needed for smaller screens */
+    font-size: 1.3em;
   }
 
   .gallery-bg-img-text p {
-    font-size: 0.5em; /* Adjust as needed for smaller screens */
+    font-size: 0.9em; /* Adjusted to make text readable */
   }
 
   .images {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .image-item {
-    height: auto;
+  .image-item img {
+    height: 18vh;
   }
 
-  .image-item img {
-    width: 100%;
-    height: 18vh;
+  .gallery-bg-img {
+    height: 50vh;
+  }
+
+  .gallery-bg-img img {
+    height: auto;
   }
 }
 
 @media (max-width: 412px) {
   .gallery-bg-img-text h2 {
-    font-size: 1.1em; /* Adjust as needed for smaller screens */
+    font-size: 1.1em;
   }
 
   .gallery-bg-img-text p {
-    font-size: 0.5em; /* Adjust as needed for smaller screens */
+    font-size: 0.8em;
   }
 
   .images {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .image-item {
-    height: auto;
+  .image-item img {
+    height: 20vh;
   }
 
-  .image-item img {
-    width: 100%;
-    height: 20vh;
+  .gallery-bg-img {
+    height: 50vh;
+  }
+
+  .gallery-bg-img img {
+    height: auto;
   }
 }
 
 @media (max-width: 378px) {
   .images {
-    grid-template-columns: (2,1fr);
-  }
-
-  .image-item {
-    height: auto;
+    grid-template-columns: repeat(2, 1fr); /* Corrected syntax here */
   }
 
   .image-item img {
-    width: 100%;
     height: 16vh;
+  }
+
+  .gallery-bg-img {
+    height: 50vh;
+  }
+
+  .gallery-bg-img img {
+    height: auto;
   }
 }

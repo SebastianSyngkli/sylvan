@@ -29,17 +29,17 @@ const Imageroom = () => {
                              onClick={() => navigate('/roomvilla')}
                             style={{
                                 display: 'flex',
-                                padding: '10px',
                                 alignItems: 'center',
-                                margin: '20px',
                                 paddingRight: '10px',
+                                padding: '10px',
                                 fontSize: '20px',
-                                backgroundColor: 'transparent',  
+                                backgroundColor: 'rgba(0, 0, 0, 0.5)', // Transparent black background 
                                 color: 'white',                  
-                                cursor: 'pointer'          
+                                cursor: 'pointer', 
+                                borderRadius: '10px'         
                             }}>
-                              <IoMdArrowBack style={{ marginRight: '8px', }} /> 
-                                Back
+                              <IoMdArrowBack style={{fontSize: '30px'}} /> 
+                                {/* Back */}
                             </button>
 
                         </div>

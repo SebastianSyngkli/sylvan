@@ -1,1 +1,1 @@
-export const url = 'https://backend.sylvanhorizonresort.in'
+export const url = 'http://localhost:5000'

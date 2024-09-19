@@ -1,296 +1,126 @@
+/* Base navbar styles */
 .navbar {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 1000;
+  border: none;
+  transition: background-color 0.8s ease-in-out;
+}
+
+.navbar.transparent {
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background-color: #000000;
+}
+
+.nav-logo img {
+  height: 66px;
+  width: 66px;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 20px;
+  padding: 20px 0;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure the toggle button is above other elements */
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.sidebar-toggle:focus {
+  outline: none;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block; /* Show the toggle button */
+  }
+
+  .nav-menu {
     position: fixed;
     top: 0;
-    width: 100%;
-    color: #ffff;
-    z-index: 1000;
-    border: none;
-    transition: background-color 0.8s ease-in-out; /* add transition effect */
-
-  }
-  
-  .navbar.transparent {
-    background: transparent;
-  }
-  
-  .navbar.scrolled {
-    background-color: #000000; /* add your desired background color here */
-  
-  }
-  .nav-logo img {
-    height: 66px;
-    width: 66px;
-  }
-  
-  .nav-menu li {
-    display: flex;
+    right: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: #000; /* Background color when menu opens */
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin: 0 20px;
-  }
-  
-  .nav-menu li a {
-    color: white;
-    text-decoration: none;
+    justify-content: center; /* Center the menu items */
+    gap: 20px; /* Adjust gap between items */
+    transform: translateX(100%); /* Initially hide the menu */
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000; /* Ensure the menu is above other content */
   }
 
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    font-size: 20px;
-    padding: 20px 0;
-    font-family: 'outfit';
-    font-weight: 500;
-    transition: transform 0.5s ease-in-out; /* add transition effect */
-  }
-  
-  
-  .sidebar-toggle {
-    display: none; /* hide the sidebar toggle button by default */
-    position: absolute;
-    top: 28px;
-    right: 30px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-    background-color: transparent;
-    color: white;
-    border: none;
-  }
-  
-  .sidebar-toggle:focus {
-    outline: none;
-  }
-  
-  
-  /* Show the sidebar toggle button on small screens */
-  @media (max-width: 768px) {
-    .sidebar-toggle {
-      display: block;
-      margin-right: 0px;
-    }
-    .navbar{
-      padding: 50px 0;
-    }
-    .nav-menu {
-      position: absolute;
-      gap: 22.5px;
-      left: 85%;
-      top: 0;
-      margin-top: 54px;
-      flex-direction: column;
-      background-color: #000;
-      width: 15%;
-      height: 33vh;
-      border-radius: 4px;
-
-      transform: translateX(135%); /* hide the menu by default */
-    }
-    .nav-menu.open {
-      transform: translateX(0); /* toggle the menu */
-    }
-    .nav-logo img {
-      position: absolute;
-      top: 21%;
-      left: 5%;
-      height: 50px !important; /* Reduce the height */
-      width: 50px !important; /* Reduce the width */
-
-    }
-    .nav-menu li{
-      font-size: 14px;
-     
-    }
-  }
-  @media(max-width: 428px){
-    .sidebar-toggle {
-      display: block;
-      margin-right: 0px;
-    }
-    .navbar{
-      padding: 50px 0;
-    }
-    .nav-menu {
-      position: absolute;
-      gap: 15px;
-      left: 80%;
-      top: 0;
-      margin-top: 54px;
-      flex-direction: column;
-      background-color: #000;
-      width: 21%;
-      height: 18vh;
-      border-radius: 4px;
-
-      transform: translateX(135%); /* hide the menu by default */
-    }
-    .nav-menu.open {
-      transform: translateX(0); /* toggle the menu */
-    }
-    .nav-logo img {
-      position: absolute;
-      top: 16%;
-      left: 5%;
-      height: 50px !important; /* Reduce the height */
-      width: 50px !important; /* Reduce the width */
-
-    }
-    .nav-menu li{
-      font-size: 10px;
-     
-    }
-  }
-  /* iPhone 11 */
-@media(max-width: 414px)  {
-  .sidebar-toggle {
-    display: block;
-    margin-right: 0px;
-  }
-  .navbar {
-    padding: 50px 0;
-  }
-  .nav-menu {
-    position: absolute;
-    gap: 13px;
-    left: 82%;
-    top: 0;
-    margin-top: 54px;
-    flex-direction: column;
-    background-color: #000;
-    width: 19%;
-    height: 17vh;
-    border-radius: 4px;
-    transform: translateX(135%);
-  }
   .nav-menu.open {
-    transform: translateX(0);
+    transform: translateX(0); /* Show the menu when open */
   }
+
   .nav-logo img {
     position: absolute;
-    top: 15%;
-    left: 5%;
-    height: 50px !important;
-    width: 50px !important;
-  }
-  .nav-menu li {
-    font-size: 8px;
-  }
-}
-/* iPhone 13 Pro */
-@media(max-width: 390px) {
-  .sidebar-toggle {
-    display: block;
-  }
-  .navbar {
-    padding: 50px 0;
-  }
-  .nav-menu {
-    position: absolute;
-    gap: 12px;
-    left: 81%;
-    top: 0;
-    margin-top: 54px;
-    flex-direction: column;
-    background-color: #000;
-    width: 20%;
-    height: 15.5vh;
-    border-radius: 4px;
-    transform: translateX(120%);
-  }
-  .nav-menu.open {
-    transform: translateX(0);
-  }
-  .nav-logo img {
-    position: absolute;
-    top: 14%;
-    left: 5%;
-    height: 50px !important;
-    width: 50px !important;
-  }
-  .nav-menu li {
-    font-size: 8px;
-  }
-}
-  /* iPhone SE (2nd generation) */
-  @media (max-width: 378px){
-    .sidebar-toggle {
-      display: block;
-    
-    }
-    .navbar {
-      padding: 50px 0;
-    }
-    .nav-menu {
-      position: absolute;
-      gap: 13px;
-      left: 79%;
-      top: 0;
-      margin-top: 54px;
-      flex-direction: column;
-      background-color: #000;
-      width: 22%;
-      height: 20vh;
-      border-radius: 4px;
-      transform: translateX(135%);
-      
-    }
-    .nav-menu.open {
-      transform: translateX(0);
-    }
-    .nav-logo img {
-      position: absolute;
-      top: 14%;
-      left: 5%;
-      height: 45px !important;
-      width: 45px !important;
-    }
-    .nav-menu li {
-      font-size: 8px;
-    }
+    top: 20px;
+    left: 20px;
+    height: 50px;
+    width: 50px;
   }
 
-/* Samsung Galaxy S10 */
-@media (max-width: 360px){
-  .sidebar-toggle {
-    display: block;
-    margin-right: 10px;
-  }
-  .navbar {
-    padding: 50px 0;
-  }
-  .nav-menu {
-    position: absolute;
-    gap: 12px;
-    left: 80%;
-    top: 0;
-    margin-top: 54px;
-    flex-direction: column;
-    background-color: #000;
-    width: 21%;
-    height: 16vh;
-    border-radius: 4px;
-    transform: translateX(135%);
-  }
-  .nav-menu.open {
-    transform: translateX(0);
-  }
-  .nav-logo img {
-    position: absolute;
-    top: 13%;
-    left: 5%;
-    height: 45px !important;
-    width: 45px !important;
-  }
   .nav-menu li {
-    font-size: 7px;
+    font-size: 18px; /* Adjust font size for mobile */
   }
 }
 
+/* iPhone SE (small screens) */
+@media (max-width: 375px) {
+  .nav-menu li {
+    font-size: 16px; /* Further reduce font size on small screens */
+  }
+
+  .nav-logo img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .sidebar-toggle {
+    font-size: 22px; /* Adjust the toggle button size */
+  }
+}

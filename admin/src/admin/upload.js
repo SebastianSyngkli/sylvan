@@ -138,6 +138,12 @@ const Update = () => {
                             <option value="singlecabbinimageitems">Singlecabbinimage-items</option>
                             <option value="fullcabbinmainimage">Fullcabbinmain-image</option>
                             <option value="fullcabbinimageitems">Fullcabbinimage-items</option>
+                            <option value="1villamain">1Bhk villa-Main</option>
+                            <option value="1villitems">1Bhk villa-items</option>
+                            <option value="villaprivatemain">Villa private-Main</option>
+                            <option value="villaprivateitems">Villa private-items</option>
+                            <option value="villacommonmain">Villa common-Main</option>
+                            <option value="villacommonitems">Villa common-items</option>
                         </select>
                     </div>
                     <div className="form-group">

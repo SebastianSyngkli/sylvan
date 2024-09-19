@@ -19,6 +19,10 @@ import Imageroomc from './imageroomc/imageroomc';
 import Imageroomd from './imageroomd/imageroomd';
 import Singlecabbin from './singlecabbin/singlecabbin';
 import Fullcabbin from './fullcabbin/fullcabbin';
+import Villa from './1villa/1villa';
+import Villaprivate from './villaprivate/villaprivate';
+import Villacommon from './villacommon/villacommon';
+
 
 const Loader = () => {
   return (
@@ -57,7 +61,7 @@ const App = () => {
               <Route path="/restaurant" element={<Restaurant />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/wedding" element={<Wedding />} />
-              <Route path="/soundproof" element={<Gallery />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/brochure" element={<Brochure />} />
               <Route path="/about" element={<About />} />
               <Route path="/imageroom" element={<Imageroom />} />
@@ -66,6 +70,9 @@ const App = () => {
               <Route path="/imageroomd" element={<Imageroomd />} />
               <Route path="/singlecabbin" element={<Singlecabbin />} />
               <Route path="/fullcabbin" element={<Fullcabbin />} />
+              <Route path="/villa" element={<Villa />} />
+              <Route path="/villaprivate" element={<Villaprivate />} />
+              <Route path="/villacommon" element={<Villacommon/>} />
             </Routes>
             <Footer />
           </div>

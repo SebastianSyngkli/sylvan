@@ -29,6 +29,7 @@ const Roomvillas = () => {
         {villaprivatepool.map((item) => (
           <div key={item.id}>
             <span className="price">Price: INR -{item.costs}</span>
+            <button onClick={() => navigate('/villaprivate')} className='btn-view'>view</button>
             <img src={item.image} alt="Villa 1" />
             <div className="villas-main">
               <h1>{item.roomname}</h1>
@@ -53,6 +54,7 @@ const Roomvillas = () => {
         {villacommonpool.map((item) => (
           <div key={item.id}>
             <span className="price">Price: INR - {item.costs}</span>
+            <button onClick={() => navigate('/villacommon')} className='btn-view'>view</button>
             <img src={item.image} alt="Villa 1" />
             <div className="villas-main">
               <h1>{item.roomname}</h1>
@@ -77,8 +79,8 @@ const Roomvillas = () => {
       <div className="villas-image">
         {onebhkvillacommonpool.map((item) => (
           <div key={item.id}>
-
             <span className="price">Price: INR - {item.costs}</span>
+            <button onClick={() => navigate('/villa')} className='btn-view'>view</button>
             <img src={item.image} alt="Villa 1" />
             <div className="villas-main">
               <h1>{item.roomname}</h1>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
-import './gallery.css';
+// import './gallery.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { itemFetch } from '../features/itemSlice';
 
@@ -14,17 +14,17 @@ const Imageroom = () => {
     }, [dispatch]);
 
     const { items: allItems } = useSelector((state) => state.items);
-    const filteredItems = allItems.filter((item) => item.category === 'imageroom');
-    const galleryItems = allItems.filter((item) => item.category === 'imageroomitems');
+    const filteredItems = allItems.filter((item) => item.category === 'villacommonmain');
+    const galleryItems = allItems.filter((item) => item.category === 'villacommonitems');
 
     return (
         <div className='gallery'>
             {filteredItems.map((item) => (
                 <>
-                    <div className="bt-galle" key={item._id}>
+                    <div className="gallery-bg-img" key={item._id}>
                         <img src={item.image} alt="gallery" />
                         <div className="gallery-bg-img-text">
-                            <h2>CATEGORY-A</h2>
+                            {/* <h2>CATEGORY-C</h2> */}
                             <button 
                              onClick={() => navigate('/roomvilla')}
                             style={{
@@ -41,8 +41,6 @@ const Imageroom = () => {
                               <IoMdArrowBack style={{fontSize: '30px'}} /> 
                                 {/* Back */}
                             </button>
-
-
 
                         </div>
                     </div>
