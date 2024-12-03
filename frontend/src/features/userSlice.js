@@ -5,7 +5,7 @@ export const register = createAsyncThunk(
   'auth/register',
   async ({ email, password, name }, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/register', { email, password, name });
+      const response = await axios.post('https://backend.sylvanhorizonresort.in/register', { email, password, name });
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data.message || 'An error occurred');
@@ -17,7 +17,7 @@ export const login = createAsyncThunk(
   'auth/login',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('https://backend.sylvanhorizonresort.in/login', { email, password });
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data.message || 'An error occurred');
@@ -30,7 +30,7 @@ export const forgotPassword = createAsyncThunk(
   'auth/forgotPassword',
   async ({ email }, { rejectWithValue }) => {
     try {
-      const response = await axios.post('http://localhost:5000/forgot', { email });
+      const response = await axios.post('https://backend.sylvanhorizonresort.in/forgot', { email });
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data.message || 'An error occurred');
@@ -42,7 +42,7 @@ export const resetPassword = createAsyncThunk(
   'auth/resetPassword',
   async ({ token, newPassword }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`http://localhost:5000/reset/${token}`, { newPassword });
+      const response = await axios.post(`https://backend.sylvanhorizonresort.in/reset/${token}`, { newPassword });
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data.message || 'An error occurred');

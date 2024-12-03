@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* In your global CSS file (e.g., styles/globals.css) */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
